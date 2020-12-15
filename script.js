@@ -1,30 +1,72 @@
+const bwButton = document.getElementById("bwBtn");
+const grayscaleButton = document.getElementById("grayscaleBtn");
+const rainbowButton = document.getElementById("rainbowBtn");
+const eraserButton = document.getElementById("eraserBtn");
+const clearButton = document.getElementById("clearBtn");
+const resetButton = document.getElementById('resetBtn');
 const container = document.getElementById('container');
-const resetButton = document.getElementById('button');
 
-document.querySelectorAll('.box').forEach(element => {
-  element.addEventListener('mouseover',event =>{
-    element.style.backgroundColor = "red";
-  })
-  
-});
 
+
+bwButton.addEventListener('click', bwGrid );
 resetButton.addEventListener('click', resetGrid );
+clearButton.addEventListener('click', clearGrid );
+rainbowButton.addEventListener('click', rainbowGrid );
+grayscaleButton.addEventListener('click', grayscaleGrid );
+eraserButton.addEventListener('click', eraserBrush );
 
-function createGrid(side){
-    container.style.setProperty('--grid-rows', side);
-    container.style.setProperty('--grid-cols', side);
+function bwGrid(){
+  document.querySelectorAll('.box').forEach(element => {
+    element.addEventListener('mouseover',event =>{
+      element.style.backgroundColor = "black";
+    })
+    
+  });
+}
+function grayscaleGrid(){
+  document.querySelectorAll('.box').forEach(element => {
+      element.addEventListener('mouseover',event =>{
+        let bgColor = element.style.getPropertyValue("background-color");
+        console.log(bgColor);
+       /* red = Math.floor(Math.random() * 256);
+        green = Math.floor(Math.random() * 256);
+        blue = Math.floor(Math.random() * 256);
+        element.style.backgroundColor = "rgb("+red+","+ green+","+ blue+")"; */
+        })
+      
+    });
 
-    for (i = 0; i < (side * side); i++) 
-    {
-        let cell = document.createElement("div");
-       
-        //cell.innerText = (i + 1);
-        cell.className = 'box';
-        container.appendChild(cell);
-        
-      }
-    }
+}
+function rainbowGrid() {
+  let red, green, blue;
 
+
+  document.querySelectorAll('.box').forEach(element => {
+      element.addEventListener('mouseover',event =>{
+        red = Math.floor(Math.random() * 256);
+        green = Math.floor(Math.random() * 256);
+        blue = Math.floor(Math.random() * 256);
+        element.style.backgroundColor = "rgb("+red+","+ green+","+ blue+")";        })
+      
+    });
+    
+     
+}
+
+function eraserBrush(){
+  document.querySelectorAll('.box').forEach(element => {
+    element.addEventListener('mouseover',event =>{
+      element.style.backgroundColor = "white";})
+
+  });
+  
+
+}
+function clearGrid() {
+  document.querySelectorAll('.box').forEach(element => {
+      element.style.backgroundColor = "white";
+     });
+}
 function resetGrid() {
   let userGridside = window.prompt("Enter the gride size you want.\nFor example for a 16x16 grid enter 16.\n(The number should be less than 100)");
   if (isNaN(userGridside))
@@ -44,11 +86,40 @@ function resetGrid() {
     });
     createGrid(parseInt(userGridside));
   }  
-  
-  }
 
-createGrid(12);
+}
 
+function createGrid(side){
+    container.style.setProperty('--grid-rows', side);
+    container.style.setProperty('--grid-cols', side);
+
+    for (i = 0; i < (side * side); i++) 
+      {
+        let cell = document.createElement("div");
+       
+        //cell.innerText = (i + 1);
+        cell.className = 'box';
+        container.appendChild(cell);
+        
+      }
+      document.querySelectorAll('.box').forEach(element => {
+        element.addEventListener('mouseover',event =>{
+          element.style.backgroundColor = "black";
+        })
+        
+      });
+      
+
+    }
+
+
+
+
+
+
+
+
+createGrid(80);
 
 
 
