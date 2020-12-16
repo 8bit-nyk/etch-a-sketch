@@ -9,15 +9,53 @@
         
         <center>
             <div id = "title">Etch-A-Sketch</div>
+            <div id="menuContainer">
+                
+                <div id="menuTitle">Options</div>
+                <div id = "menu">
+                    
+                    <div class= "innerMenu" >Color Menu
+                        <div class ="innerMenu" id = "colorContainer">
+                            <div class = "colorItem" > black </div>
+                            <div class = "colorItem" > red </div>
+                            <div class = "colorItem" > blue </div>
+                            <div class = "colorItem" > green </div>
+                            <div class = "colorItem" > yellow</div>
+                            <div class = "colorItem" > orange </div>
+                            <div class = "colorItem" > purple </div>
+                        
+                        </div>
+                    </div>
+                    <div class= "innerMenu">Buttons
+                         
+                        
+                        <button class = "button" id = "grayscaleBtn">Grayscale </button>
+                        <button class = "button" id = "rainbowBtn">Rainbow </button>
+                        <button class = "button" id = "eraserBtn">Eraser </button>
+                        <button class = "button" id = "clearBtn">Clear Grid </button>
+                        <!--
+                            <button class = "button" id = "bwBtn">Black&White </button> 
+                            <button class = "button" id = "resetBtn">Reset Grid </button> 
+                        -->
+                    </div>
+                </div>
             
-            <button class = "button" id = "bwBtn">Black&White </button>
-            <button class = "button" id = "grayscaleBtn">Grayscale </button>
-            <button class = "button" id = "rainbowBtn">Rainbow </button>
-            <button class = "button" id = "eraserBtn">Eraser </button>
-            <button class = "button" id = "clearBtn">Clear Grid </button>
-            <button class = "button" id = "resetBtn">Reset Grid </button>
+              
+            </div>
+       
+          
+            
+            
             <div id = "board">
                 <div id="container"></div>
+            </div>
+            <div class="slidecontainer">
+                0
+                <input type="range" min="1" max="100" value="50" class="slider" id="pxRange">
+               100
+            </div>
+            <div id = "pxCount">
+                    Pixel Count: 
             </div>
 
         </center>

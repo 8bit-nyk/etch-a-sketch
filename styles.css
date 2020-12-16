@@ -1,28 +1,104 @@
 
 #title{
-    border: 4px solid cyan;
+    /*border: 4px solid cyan;*/
     font-size: 50px;
     font-family: "Bangers";
     color: red;
+    opacity: 0.8;
 }
+
+
+#menuContainer{
+    background-color:red;
+    border: 5px solid rgba(255, 136, 136, 0.5);
+    opacity: 0.8;
+    height: 250px;
+    width: 600px;
+    display: flex;
+    flex-direction: column;
+    justify-content:center;
+    align-items: center;
+    
+   
+}
+
+
+
+#menuTitle{
+    /*border: 2px solid white;*/
+
+    font-size: 25px;
+    font-family: "Bangers";
+    color:white;
+    
+    width: 80%;
+  
+
+
+}
+#menu{
+    /*border: 5px solid white;*/
+    height: 90%;
+    width: 90%;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items:center;
+    padding: 5px;
+   
+  
+    
+}
+
+.innerMenu{
+    border: 5px solid white;
+    height: 90%;
+    width: 90%;
+    font-size: 22px;
+    font-family: "Bangers";
+    color:white;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
 .button{
-
-    margin: 20px;
-    padding: 10px;
-    width: 200px;
-    font-size: 16px;
-    font-family: 'courier';
+    width: 140px;
+    font-size: 20px;
+    font-family: 'Bangers';
     border-radius:10%;
+    margin-top: 5px;
+    color: red;
+    cursor: pointer;
+}
+
+#colorContainer{
+    border: 2px solid white;
+    height: 140px;
+    width: 140px;
+    font-size: 20px;
+    font-family: 'Bangers';
+    cursor: pointer; 
 
 }
+.colorItem{
+    /*border : 1px solid white;*/
+    width: 40%;
+    font-size: 18px;
+    
+}
+ 
 #board{
     border: 0.5px solid white;
     background-image: url("images/backgroundEaS.jpg");
+    
     width: 500px;
     height: 500px;
     background-size: 93% 100%;
     background-repeat: no-repeat;
-    
+    margin-top:20px;
+    background-position: center;
 
     /*background-color: rgb(226, 34, 34);
     border-radius: 15%;
@@ -41,7 +117,6 @@
     height: 65%;
     
     margin-top: 90px;
-    margin-right: 40px;
     
     
     
@@ -54,6 +129,64 @@
     width: 100%;
     height:100%;
 }
+
+.slidecontainer{
+   /* border: 2px solid black;*/
+    width: 600px;;
+    margin-top:10px;
+    font-size: 30px;
+    color: white;
+    background-color:red;
+    font-family: "Bangers";
+    opacity:0.85;
+}
+.slidecontainer:hover{
+    opacity:1;
+}
+
+.slider {
+    -webkit-appearance: none ;  /* Override default CSS styles */
+    appearance: none;
+    width: 500px; 
+    height: 20px; 
+    background: white; 
+    outline: none; 
+    opacity: 1; 
+    -webkit-transition: .2s; 
+    transition: opacity .2s;
+   
+  }
+
+
+  .slider:hover {
+    opacity: 0.9; /* Fully shown on mouse-over */
+  }
+
+  .slider::-webkit-slider-thumb {
+    -webkit-appearance: none; /* Override default look */
+    appearance: none;
+    border: 1px solid white;
+    border-radius: 50%;
+    width: 30px; /* Set a specific slider handle width */
+    height: 35px; /* Slider handle height */
+    background: red; /* Green background */
+    cursor: pointer; /* Cursor on hover */
+
+  }
+
+
+  #pxCount{
+   /* border: 3px solid purple;*/
+    height: 25px;
+    margin-top: 10px;
+  
+    color: red;
+    font-family: "Bangers";
+    font-size: 30px;
+
+
+  }
+
 #footer{
     border: 3px solid brown;
     margin-top: 20px;
