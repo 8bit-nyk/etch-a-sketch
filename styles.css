@@ -67,10 +67,19 @@
     width: 140px;
     font-size: 20px;
     font-family: 'Bangers';
+    border: 0.5px solid red;
     border-radius:10%;
     margin-top: 5px;
     color: red;
     cursor: pointer;
+}
+
+.button:hover{
+    background: red;
+    color:white;
+    border: 0.5px solid white;
+    opacity: 0.9;
+    transition: all ease 0.25s;
 }
 
 #colorContainer{
@@ -82,12 +91,31 @@
     cursor: pointer; 
 
 }
+
+#colorTitle{
+    /*border:1px solid white;*/
+    width:100%;
+    display: flex;
+    flex-direction:row;
+    justify-content: center;
+    align-items: center;
+
+}
+#colorIndicator{
+    border:1.5px solid white;
+    border-radius: 50%;
+    width: 15px;
+    height: 15px;
+    margin-left: 10px;
+
+}
 .colorItem{
     /*border : 1px solid white;*/
     width: 40%;
     font-size: 18px;
     
 }
+
  
 #board{
     border: 0.5px solid white;
@@ -109,7 +137,7 @@
     
     border: 2px solid black;
     display: grid; 
-    
+    background: white;
     grid-template-rows: repeat(var(--grid-rows),   minmax(0,1fr));
     grid-template-columns: repeat(var(--grid-cols),  minmax(0,1fr) );
 
@@ -124,10 +152,11 @@
 
 
 .box{
-   /* border: 1px solid blue;*/
+
     background: white; 
     width: 100%;
     height:100%;
+    transition: background-color 0.5s;
 }
 
 .slidecontainer{
@@ -188,7 +217,22 @@
   }
 
 #footer{
-    border: 3px solid brown;
+    border: 3px solid red;
+    color: red;
+    opacity: 0.8;
+    width:100px;
     margin-top: 20px;
+    font-family: "Bangers";
+    font-size: 15px;
+    transition: opacity .5s;
+    cursor : pointer;
 
 }
+#footer:hover{
+    opacity:1;
+}
+a{
+    text-decoration: none;
+
+}
+
